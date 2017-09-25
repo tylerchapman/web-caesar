@@ -2,15 +2,33 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="form-styles.css">
+      <style>
+        h1, h3 {
+          text-align: center;
+        }
+        form {
+            background-color: #eee;
+            padding: 20px;
+            margin: 0 auto;
+            width: 540px;
+            font: 16px sans-serif;
+            border-radius: 10px;
+        }
+        textarea {
+            margin: 10px 0;
+            width: 540px;
+            height: 120px;
+        }
+      </style>
     </head>
     <body>
       <!-- create your form here -->
       <h1>Web Caesar</h1>
-      <form action="POST">
+      <h3>By: Tyler Chapman</h3>
+      <form action="/" method="POST">
         <label for="rot">Rotate By:</label>
         <input type="text" name="rot" value="0"><br>
-        <textarea name="text" rows="8" cols="80"></textarea><br>
+        <textarea name="text" rows="8" cols="80">{% if encrypted_text %}{{ encrypted_text }}{% endif %}</textarea><br>
         <button type="submit">Submit</button>
       </form>
     </body>
